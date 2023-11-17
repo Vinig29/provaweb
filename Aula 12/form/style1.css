@@ -1,0 +1,9 @@
+body {
+    margin: 0px; /* Define a margem do corpo da página como zero pixels */
+    font-family: Arial, Helvetica, sans-serif; /* Define a família de fontes para o corpo do texto */
+}
+
+#tabela a {
+    color: blue; /* Define a cor do texto dos links dentro do elemento com o ID 'tabela' como azul */
+    margin-right: 10px; /* Define a margem à direita dos links dentro do elemento com o ID 'tabela' como 10 pixels */
+}

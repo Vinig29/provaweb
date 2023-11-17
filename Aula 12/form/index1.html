@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+<main>
+    <section>
+        <!-- Formulário de entrada de dados -->
+        <form id="form">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome"><br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <button type="button" onclick="Salvar()">Salvar</button> <!-- Botão para salvar os dados -->
+        </form>
+        <a href="./tabela.html">ver tabela</a> <!-- Link para visualizar a tabela -->
+    </section>
+</main>
+    <!-- JavaScript -->
+    <script>
+        // Captura dos elementos do formulário
+        const form = document.getElementById('form');
+        const nome = document.getElementById('nome');
+        const email = document.getElementById('email');
+
+        // Carregar os dados do armazenamento local
+        var dados = JSON.parse(localStorage.getItem('dados')) || [];
+
+        // Configuração da tabela usando DataTables
+        const tabela = $('#tabela').DataTable({
+            responsive: true,
+            language: {
+                // Definição do texto para a tabela em diferentes idiomas
+                "sProcessing": "Processando...",
+                // ... (continua para outras definições)
+            }
+        });
+
+        // Função para salvar os dados no armazenamento local
+        function Salvar() {
+            let novoNome = nome.value;
+            let novoEmail = email.value;
+
+            // Adiciona novos dados ao array 'dados'
+            dados.push({ nome: novoNome, email: novoEmail });
+
+            // Atualiza os dados no armazenamento local
+            localStorage.setItem('dados', JSON.stringify(dados));
+
+            // Redireciona para a página inicial
+            window.location.href = "./index.html";
+        }
+    </script>
+    <br><br><br><br><br>
+</body>
+</html>

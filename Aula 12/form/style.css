@@ -1,0 +1,9 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tabela a{
+    color: blue;
+    margin-right: 10px;
+}

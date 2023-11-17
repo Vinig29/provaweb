@@ -1,0 +1,72 @@
+/* Estilos CSS */
+
+/* Configurações gerais do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte para Arial ou uma fonte genérica sem serifa */
+    margin: 0px; /* Remove as margens padrão do corpo */
+    padding: 0px; /* Remove o preenchimento padrão do corpo */
+}
+
+/* Estilos para o contêiner do grid */
+.grid-container {
+    display: grid; /* Define o contêiner como um grid */
+    grid-template-columns: 1fr 3fr 1fr; /* Define três colunas com proporções específicas */
+    grid-template-rows: 150px auto 100px; /* Define três linhas com alturas específicas */
+    grid-template-areas: 
+        "header header header" /* Define áreas para o cabeçalho */
+        "main main aside" /* Define áreas para o conteúdo principal e barra lateral */
+        "footer footer footer"; /* Define área para o rodapé */
+    padding: 20px; /* Adiciona preenchimento interno ao contêiner */
+}
+
+/* Estilos para o cabeçalho */
+.header {
+    grid-area: header; /* Define a área do grid para o cabeçalho */
+    background-color: rgb(254,147,147); /* Define a cor de fundo para o cabeçalho */
+}
+
+/* Estilos para a barra lateral */
+.aside {
+    grid-area: aside; /* Define a área do grid para a barra lateral */
+    background-color: #317adbe8; /* Define a cor de fundo para a barra lateral */
+}
+
+/* Estilos para o conteúdo principal */
+.main {
+    grid-area: main; /* Define a área do grid para o conteúdo principal */
+    background-color: #09dc29e8; /* Define a cor de fundo para o conteúdo principal */
+    text-align: center; /* Centraliza o texto dentro do conteúdo principal */
+}
+
+/* Estilos para o rodapé */
+.footer {
+    grid-area: footer; /* Define a área do grid para o rodapé */
+    background-color: #98a199e8; /* Define a cor de fundo para o rodapé */
+}
+
+/* Estilos para os itens no conteúdo principal */
+.item {
+    display: inline-block; /* Define os itens como elementos em linha com bloco */
+    background-color: rgb(0,72,139); /* Define a cor de fundo para os itens */
+    padding: 50px 20px; /* Adiciona preenchimento interno aos itens */
+    width: calc(33.33% - 46px); /* Define a largura dos itens */
+    min-width: 200px; /* Define a largura mínima dos itens */
+    margin: 5px 0px; /* Define as margens dos itens */
+    text-align: center; /* Centraliza o texto dentro dos itens */
+}
+
+/* Estilos para a responsividade dos itens em diferentes tamanhos de tela */
+
+/* Para telas menores que 977px */
+@media (max-width: 977px) {
+    .item {
+        width: calc(50% - 43px); /* Altera a largura dos itens */
+    }
+}
+
+/* Para telas menores que 672px */
+@media (max-width: 672px) {
+    .item {
+        width: calc(100% - 40px); /* Altera a largura dos itens */
+    }
+}

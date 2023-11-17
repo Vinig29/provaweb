@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+    <style>
+    dialog{
+        width: 70%;
+        border: 0;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    dialog::backdrop{
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    </style>
+</head>
+<body>
+    <h1>Exemplos em JS</h1>
+    <p>Paragrafo normal</p>
+    <div>
+        <div>
+            <p>Paragrafo em div aninhadas</p>
+        </div>
+    </div>
+    <span>
+        tag span
+        <p>Texto dentro do span</p>
+    </span>
+    <!-- Modal -->
+    <a href="#">Abrir</a>
+    <dialog>
+        <h2>Titulo Modal</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sit hic quam quos possimus repellendus consectetur ad natus molestiae dolor fuga praesentium? Beatae repellendus consectetur voluptatibus ipsa eveniet quibusdam iusto.</p>
+        <a href="#">Fechar</a>
+    </dialog>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+<script>
+    const paragrafo = document.querySelector("div div p");
+    const tagsP = document.querySelectorAll("p"); //vetor
+    const span = document.querySelector("span");
+
+    tagsP.forEach(p => {
+        p.style.color = "green";
+    })
+    paragrafo.style.color = "blue";
+
+    span.style.backgroundColor = "grey";
+    span.style.display = "block";
+    span.style.padding = "10px";
+
+    //MODAL
+
+    const modal = document.querySelector("dialog");
+    const btnModal = document.querySelectorAll("a");
+    btnModal[0].onclick = function(){
+        modal.showModal();
+    }
+
+    btnModal[1].onclick = function(){
+        modal.close();
+    }
+
+    modal.addEventListener("click", event => {
+        if(event.target === modal){
+            modal.close();
+        }
+    });
+
+</script>
+</html>

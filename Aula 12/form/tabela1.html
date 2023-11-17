@@ -1,0 +1,40 @@
+<!-- O código HTML foi mantido -->
+
+<script>
+    // Obtém os dados do armazenamento local ou cria um array vazio se não houver dados
+    const dados = JSON.parse(localStorage.getItem('dados')) || [];
+
+    // Obtém a referência à tabela no HTML pelo ID
+    const tabela = document.getElementById('tabela');
+
+    // Função para exibir os dados na tabela HTML
+    function exibirdados() {
+        // Itera sobre os dados e gera as linhas da tabela para cada item
+        dados.forEach((item, chave) => {
+            tabela.innerHTML += `
+                <tr>
+                    <td>${chave}</td>
+                    <td>${item.nome}</td> 
+                    <td>${item.email}</td>
+                    <td>
+                        <a href="index.html?chave=${chave}"><i class="fa-regular fa-pen-to-square"></i></a>
+                        <a href="#" onclick="remover(${chave})"><i class="fa-solid fa-trash"></i></a>
+                    </td>
+                </tr>
+            `;
+        });
+    }
+
+    // Função para remover um item da tabela e do armazenamento local
+    function remover(chave) {
+        // Remove o item do array 'dados' com base na chave passada como parâmetro
+        dados.splice(chave, 1);
+        // Atualiza os dados no armazenamento local após a remoção
+        localStorage.setItem('dados', JSON.stringify(dados));
+        // Redireciona de volta para a página da tabela após a remoção
+        window.location.href = "./tabela.html";
+    }
+
+    // Chama a função exibirdados para exibir os dados na tabela ao carregar a página
+    exibirdados();
+</script>

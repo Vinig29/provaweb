@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+<main>
+    <section>
+        <form id="form">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome"><br>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+            <button type="button" onclick="Salvar()">Salvar</button>
+        </form>
+        <a href="./tabela.html">ver tabela</a>
+    </section>
+</main>
+    <script>
+        const form = document.getElementById('form');
+        const nome = document.getElementById('nome');
+        const email = document.getElementById('email');
+
+        //Fução para salvar os dados digitados 
+        var dados = JSON.parse(localStorage.getItem('dados')) || [];
+        const tabela = $('#tabela').DataTable({
+            responsive: true,
+            language: {
+             "sProcessing": "Processando...",
+
+                "sLengthMenu": "Mostrar _MENU_ registros",
+
+                "sZeroRecords": "Nenhum registro encontrado",
+
+                "sInfo": "Mostrando _START_ até _END_ de _TOTAL_ registros",
+
+                "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+
+                "sInfoFiltered": "(filtrado de _MAX_ registros no total)",
+
+                "sInfoPostFix": "",
+
+                "sSearch": "Pesquisar:",
+
+                "sUrl": "",
+
+                "oPaginate": {
+
+                "sFirst": "Primeiro",
+
+                "sPrevious": "Anterior",
+
+                "sNext": "Próximo",
+
+                "sLast": "Último"
+
+                },
+
+                "sAriaSortAsc": ": Ordenar coluna em ordem crescente",
+
+                "sAriaSortDesc": ": Ordenar coluna em ordem decrescente"
+
+                
+            }
+        })
+        function Salvar(){
+            let novoNome = nome.value;
+            let novoEmail = email.value;
+
+            dados.push({nome: novoNome, email: novoEmail});
+
+            localStorage.setItem('dados', JSON.stringify(dados));
+            window.location.href = "./index.html"
+        }
+
+    </script>
+    <br><br><br><br><br>
+</body>
+</html>

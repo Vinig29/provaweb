@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    /* Define a margem zero para o corpo do documento. */
+}
+
+header {
+    margin-top: 200px;
+    /* Adiciona uma margem superior de 200px ao cabeçalho. */
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    /* Define o posicionamento "sticky" para o elemento de navegação (nav) no topo da janela quando o usuário rolar a página. */
+}
+
+ul {
+    display: flex;
+    background-image: linear-gradient(to bottom, #000, #444);
+    margin: 0;
+    /* Define a exibição flexível para a lista não ordenada (ul) e aplica um gradiente de fundo. */
+}
+
+li {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    /* Define a exibição de itens da lista (li) como blocos em linha, com preenchimento interno e cor de texto. */
+}
+
+li:hover {
+    background-image: linear-gradient(to top, #000, #444);
+    /* Define um gradiente de fundo para os itens da lista quando são pairados pelo cursor. */
+}
+
+li ul {
+    display: none;
+    position: absolute;
+    padding: 0;
+    flex-direction: column;
+    transform: translate(-10px, 10px);
+    /* Define as propriedades para o menu suspenso aninhado (ul) nos itens da lista. Inicialmente oculta e, quando ativada, exibida em coluna com um deslocamento na posição. */
+}
+
+li:hover ul {
+    display: flex;
+    /* Exibe o menu suspenso quando o item da lista é pairado pelo cursor. */
+}
+
+ul:hover li:not(:hover) {
+    color: grey;
+    /* Altera a cor do texto dos itens da lista não pairados quando o cursor está sobre a lista não ordenada (ul). */
+}
+
+main {
+    height: 200vw;
+    /* Define a altura do elemento principal (main) como 200% da altura da janela de visualização. */
+}

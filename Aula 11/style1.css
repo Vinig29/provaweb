@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    height: 200vh; /* Define a altura do corpo como 200% da altura da viewport */
+}
+
+main {
+    width: 80%; /* Define a largura do elemento 'main' como 80% do seu contêiner pai */
+    margin: 50px auto; /* Margens superior e inferior de 50px, e as laterais são automáticas */
+    background-color: #ccc; /* Define a cor de fundo do elemento 'main' */
+}
+
+div {
+    padding: 10px; /* Define o preenchimento interno de todos os elementos div */
+    min-width: 600px; /* Define a largura mínima de todos os elementos div como 600px */
+}
+
+.static {
+    position: static; /* Define a posição estática para o elemento com a classe 'static' */
+    background-color: yellow; /* Define a cor de fundo para o elemento com a classe 'static' */
+    top: 10px; /* Define a distância do topo como 10px (embora para elementos estáticos, essa propriedade não tenha efeito) */
+    left: 10px; /* Define a distância da esquerda como 10px (não afeta elementos estáticos) */
+}
+
+div:hover {
+    position: absolute; /* Define a posição absoluta para elementos div quando estão sendo hover */
+    width: 100vw; /* Define a largura como 100% da largura da viewport */
+    height: 100vw; /* Define a altura como 100% da largura da viewport */
+    top: 0; /* Coloca o elemento no topo da viewport */
+    bottom: 0; /* Coloca o elemento na parte inferior da viewport */
+    left: 0; /* Coloca o elemento à esquerda da viewport */
+    right: 0; /* Coloca o elemento à direita da viewport */
+    z-index: 9999; /* Define a ordem de sobreposição do elemento em relação a outros elementos */
+    background-color: rgba(0, 0, 0, 0.2); /* Define a cor de fundo com transparência */
+    backdrop-filter: blur(10px); /* Aplica um desfoque no que estiver por trás do elemento */
+}
+
+.relative {
+    position: relative; /* Define a posição relativa para o elemento com a classe 'relative' */
+    background-color: aquamarine; /* Define a cor de fundo para o elemento com a classe 'relative' */
+    top: 10px; /* Define o deslocamento de 10px do topo */
+    right: 10px; /* Define o deslocamento de 10px da direita */
+}
+
+.absolute {
+    position: absolute; /* Define a posição absoluta para o elemento com a classe 'absolute' */
+    background-color: greenyellow; /* Define a cor de fundo para o elemento com a classe 'absolute' */
+    bottom: 10px; /* Define o deslocamento de 10px da parte inferior */
+    left: 10px; /* Define o deslocamento de 10px da esquerda */
+}
+
+.fixed {
+    position: fixed; /* Define a posição fixa para o elemento com a classe 'fixed' */
+    background-color: green; /* Define a cor de fundo para o elemento com a classe 'fixed' */
+    bottom: 10px; /* Define o deslocamento de 10px da parte inferior */
+    right: 10px; /* Define o deslocamento de 10px da direita */
+}

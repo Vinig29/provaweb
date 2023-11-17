@@ -1,0 +1,48 @@
+/* Configurações gerais para o corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte padrão para o corpo do documento */
+    margin: 0; /* Remove as margens padrão do corpo */
+}
+
+/* Estilos para o elemento principal 'main' */
+main {
+    display: flex; /* Define o container 'main' como um flex container */
+    flex-direction: row; /* Define a direção dos itens como linha */
+    justify-content: flex-end; /* Alinha os itens ao final do eixo principal (à direita) */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha conforme necessário */
+}
+
+/* Estilos para a lista não ordenada (ul) dentro do header */
+ul {
+    margin: 0; /* Remove as margens padrão da lista */
+    height: 50px; /* Define a altura da lista */
+    display: flex; /* Define a lista como um flex container */
+    align-items: center; /* Centraliza os itens verticalmente dentro da lista */
+    background: linear-gradient(to bottom, #17005b, #5c25ff); /* Aplica um gradiente de fundo à lista */
+}
+
+/* Estilos para os itens de lista (li) */
+li {
+    display: inline-block; /* Define os itens como elementos de linha */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    color: #fff; /* Define a cor do texto como branca */
+    padding: 10px; /* Adiciona preenchimento interno aos itens */
+}
+
+/* Estilos de hover para os itens da lista */
+li:hover {
+    background-image: linear-gradient(to top, #17005b, #5c25ff); /* Aplica um gradiente de fundo quando o item é destacado */
+    border-left: 1px solid rgba(0, 0, 0, 0.2); /* Adiciona uma borda esquerda */
+    border-right: 1px solid rgba(0, 0, 0, 0.2); /* Adiciona uma borda direita */
+}
+
+/* Estilos para os itens com classe 'item' */
+.item {
+    flex-grow: 1; /* Define a capacidade de crescimento flexível dos itens */
+    flex-basis: 250px; /* Define o tamanho base dos itens */
+    background-color: rgb(5, 105, 193); /* Define a cor de fundo dos itens */
+    padding: 50px 20px; /* Adiciona preenchimento interno aos itens */
+    text-align: center; /* Centraliza o texto dentro dos itens */
+    color: #fff; /* Define a cor do texto como branca */
+    margin: 5px; /* Define as margens dos itens */
+}

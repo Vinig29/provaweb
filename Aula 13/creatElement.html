@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat Element</title>
+</head>
+<body>
+</body>
+<script>
+    const form = document.createElement("form");
+    form.action = "submit()";
+
+    const labelNome = document.createElement("label");
+    labelNome.setAttribute("for", "nome");
+    labelNome.innerText = "Nome: ";
+
+    const nome = document.createElement("input");
+    nome.type = "text";
+    nome.id = "nome";
+    nome.name = "nome";
+
+    const labelSenha = document.createElement("label");
+    labelSenha.for = "password";
+    labelSenha.innerText = "Senha: ";
+
+    const senha = document.createElement("input");
+    senha.type = "password";
+    senha.id = "senha";
+    senha.name = "senha";
+
+    const btnSubmit = document.createElement("input");
+    btnSubmit.type = "submit";
+
+    form.appendChild(labelNome)
+    form.appendChild(nome);
+    form.innerHTML += "<br>";
+    form.appendChild(labelSenha);
+    form.appendChild(senha);
+    form.innerHTML += "<br>";
+    form.appendChild(btnSubmit);
+
+
+    document.body.appendChild(form);
+
+
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a escala inicial para dispositivos -->
+    <title>Tabela 1</title>
+    <style>
+        table {
+            width: 100%; /* Define a largura da tabela */
+        }
+        td, th {
+            border: 1px solid black; /* Define uma borda de 1px sólida e preta para células de dados e cabeçalhos de tabela */
+            padding: 8px; /* Adiciona espaço interno de 8px para células de dados e cabeçalhos de tabela */
+            text-align: center; /* Alinha o conteúdo das células ao centro */
+        }
+        nav ul {
+            list-style: none; /* Remove a formatação padrão da lista (pontos, números, etc.) */
+            padding: 0px; /* Remove o preenchimento padrão da lista não ordenada */
+        }
+        nav ul li {
+            float: left; /* Faz com que os itens da lista apareçam horizontalmente */
+            padding: 10px; /* Adiciona espaço interno de 10px para os itens da lista */
+        }
+    </style>
+</head>
+<body>
+<main>
+<header>
+    <nav>
+    <ul>
+        <li><a href="index.html">Exercício 1</a></li> <!-- Lista de navegação com links para diferentes exercícios -->
+        <li><a href="tabela2.html">Exercicio 2</a></li>
+    </ul>
+    <br>
+    <br>
+    <h1>Exercicio de Tabelas</h1> <!-- Título do exercício -->
+    </nav>
+</header>
+<section>
+    <h2>Tabela 1</h2> <!-- Título da tabela -->
+    <table>
+    <thead>
+    <tr>
+        <th rowspan="2">Produto</th> <!-- Cabeçalho de uma célula que se estende por duas linhas -->
+        <th colspan="4">vendas por região</th> <!-- Cabeçalho que se estende por quatro colunas -->
+        <th rowspan="2">Total</th> <!-- Cabeçalho de uma célula que se estende por duas linhas -->
+    </tr>
+    <tr>
+        <th>Região Norte</th> <!-- Cabeçalho de coluna -->
+        <th>Região Sul</th>
+        <th>Região Leste</th>
+        <th>Região Oeste</th>
+    </tr>
+    </thead>
+    <tbody>
+        <!-- Linhas com dados da tabela -->
+    </tbody>
+    </table>
+</section>
+</main>
+    
+</body>
+<footer><p>&copy;2023 - Todos os direitos reservado</p></footer> <!-- Rodapé da página -->
+</html>
